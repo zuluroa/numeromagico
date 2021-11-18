@@ -28,9 +28,13 @@ while (nivel <= 3 && oportinidades !== 0) {
     if (numeroCorrecto === numeroUsuario) {
         alert(`GANASTE EL NIVEL ${nivel} PASAS AL NIVEL ${nivel += 1}!!!`);
         continue;
-    } else if (numeroCorrecto != numeroUsuario) {
+    }else if (numeroUsuario < numeroCorrecto) {
         oportinidades--;
-        alert(`PERDISTE TE QUEDAN ${oportinidades}`);
+        alert("EL NUMERO ES MENOR QUE EL NUMERO MAGICO, VUELVE A INTENTARLO, TE QUEDAN " + oportinidades + " INTENTOS");
+    }
+    else if (numeroUsuario > numeroCorrecto) {
+        oportinidades--;
+        alert("EL NUMERO ES MAYOR QUE EL NUMERO MAGICO, VUELVE A INTENTARLO, TE QUEDAN " + oportinidades + " INTENTOS");
     }
 
     if (oportinidades === 0) {
